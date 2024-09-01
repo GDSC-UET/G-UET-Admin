@@ -1,0 +1,10 @@
+@import url('~/assets/css/variables.css');
+
+* {
+  background-color: transparent;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
