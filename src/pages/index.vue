@@ -1,5 +1,3 @@
 <template>
-  <UContainer class="flex h-[200px] flex-col text-black md:flex-row">
-    <CommonLogo />
-  </UContainer>
+  <div class="h-[200px] w-[200px]">hello</div>
 </template>
