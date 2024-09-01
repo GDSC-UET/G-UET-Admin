@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         }
       }
     ],
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxt/image'
   ],
 
   colorMode: {
