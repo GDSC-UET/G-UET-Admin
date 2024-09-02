@@ -5,7 +5,6 @@
       :create-button="tablePagesData.createButton"
       :data-fields="tablePagesData.dataFields"
       :data="tablePagesData.data"
-      @search="handleSearch"
     />
   </UContainer>
 </template>
@@ -49,8 +48,4 @@ const tablePagesData = ref<TablePages>({
   ],
   data: mockJobs
 })
-
-const handleSearch = (query: string, field: string, page: number) => {
-  console.log(query, field, page)
-}
 </script>
