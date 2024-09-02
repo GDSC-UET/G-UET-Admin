@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-fit">
-    <UBadge :color="color" :label="label" size="lg" class="relative mt-2" />
+    <UBadge :color="color" :label="label" size="lg" class="relative" />
     <div v-if="label === 'Board of Leader'" class="absolute bottom-[0.5px] flex h-[2px] w-full">
       <div class="bg-primary grow rounded-bl-lg"></div>
       <div class="grow bg-red-500"></div>
