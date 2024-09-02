@@ -2,7 +2,7 @@
   <div class="mt-16 flex flex-col gap-8">
     <div class="flex w-full items-center justify-between">
       <span class="text-2xl font-medium">{{ title }}</span>
-      <nuxt-link :to="createButton.to">
+      <nuxt-link v-if="createButton" :to="createButton.to">
         <UButton size="md" icon="i-heroicons-pencil-square" :label="createButton.label" />
       </nuxt-link>
     </div>

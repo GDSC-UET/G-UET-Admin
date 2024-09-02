@@ -1,6 +1,6 @@
 export type TablePages = {
   title: string
-  createButton: {
+  createButton?: {
     label: string
     to: string
   }

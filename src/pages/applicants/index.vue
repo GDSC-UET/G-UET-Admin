@@ -11,14 +11,10 @@
 
 <script setup lang="ts">
 import type { TablePages } from '~/types/table-pages'
-import { mockMembers } from '~/mock/members'
+import { mockApplicants } from '~/mock/applicants'
 
 const tablePagesData = ref<TablePages>({
-  title: 'All Members',
-  createButton: {
-    label: 'Add new member',
-    to: '/members/new'
-  },
+  title: 'All Applicants',
   dataFields: [
     {
       key: 'id',
@@ -36,16 +32,16 @@ const tablePagesData = ref<TablePages>({
       sortable: true
     },
     {
-      key: 'gen',
-      label: 'Gen',
-      sortable: true
+      key: 'linkCV',
+      label: 'Link CV',
+      sortable: false
     },
     {
-      key: 'school',
-      label: 'School',
-      sortable: false
+      key: 'appliedAt',
+      label: 'Applied At',
+      sortable: true
     }
   ],
-  data: mockMembers
+  data: mockApplicants
 })
 </script>
