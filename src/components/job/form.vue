@@ -78,7 +78,7 @@ const emit = defineEmits<{
   (e: 'form-submit', data: object): void
 }>()
 
-const onSubmit = async (event: FormSubmitEvent<any>) => {
+const onSubmit = async (event: FormSubmitEvent<JobFormState>) => {
   emit('form-submit', event.data)
 }
 </script>
