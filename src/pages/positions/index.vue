@@ -2,6 +2,7 @@
   <UContainer>
     <PagesTable
       :title="tablePagesData.title"
+      :create-button="tablePagesData.createButton"
       :data-fields="tablePagesData.dataFields"
       :data="tablePagesData.data"
     />
@@ -9,11 +10,15 @@
 </template>
 
 <script setup lang="ts">
+import { mockPositions } from '~/mock/positions'
 import type { TablePages } from '~/types/table-pages'
-import { mockApplicants } from '~/mock/applicants'
 
 const tablePagesData = ref<TablePages>({
-  title: 'All Applicants',
+  title: 'All Positions',
+  createButton: {
+    label: 'Add new position',
+    to: '/positions/new'
+  },
   dataFields: [
     {
       key: 'id',
@@ -22,25 +27,25 @@ const tablePagesData = ref<TablePages>({
     },
     {
       key: 'name',
-      label: 'Name',
-      sortable: false
-    },
-    {
-      key: 'position',
       label: 'Position',
       sortable: true
     },
     {
-      key: 'linkCV',
-      label: 'Link CV',
+      key: 'team',
+      label: 'Team',
+      sortable: true
+    },
+    {
+      key: 'description',
+      label: 'Description',
       sortable: false
     },
     {
-      key: 'appliedAt',
-      label: 'Applied At',
+      key: 'members',
+      label: 'Members',
       sortable: true
     }
   ],
-  data: mockApplicants
+  data: mockPositions
 })
 </script>
