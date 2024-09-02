@@ -4,6 +4,8 @@
       <CommonLogo class="mt-4" />
       <CommonVerticalNavigation />
     </div>
-    <slot />
+    <div class="grow">
+      <slot />
+    </div>
   </div>
 </template>
