@@ -2,7 +2,7 @@
   <PagesForm
     :title="title"
     :action="action"
-    @submit="submit"
+    @submit="formRef.submit()"
     :submit-button-label="submitButtonLabel"
   >
     <UForm
@@ -68,10 +68,6 @@ const onError = async (event: FormErrorEvent) => {
   const element = document.getElementById(event.errors[0].id)
   element?.focus()
   element?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-}
-
-const submit = async () => {
-  formRef.value?.submit()
 }
 
 const emit = defineEmits<{
