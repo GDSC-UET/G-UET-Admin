@@ -1,6 +1,15 @@
+import type { FormAction } from './form-pages'
+
+export type JobFormState = {
+  position?: string
+  description?: string
+  isOpen?: boolean
+  tag?: string
+}
+
 export type JobForm = {
-  position: string
-  description: string
-  isOpen: boolean
-  tag: string
+  form?: JobFormState
+  action: FormAction
+  title: string
+  submitButtonLabel: string
 }

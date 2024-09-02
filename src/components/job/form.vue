@@ -1,5 +1,10 @@
 <template>
-  <PagesForm title="Add new job" action="create" @submit="submit" submit-button-label="Create job">
+  <PagesForm
+    :title="title"
+    :action="action"
+    @submit="submit"
+    :submit-button-label="submitButtonLabel"
+  >
     <UForm
       :validate="validate"
       :state="state"
@@ -14,6 +19,7 @@
           size="xl"
           v-model="state.position"
           :options="positionOptions"
+          :disabled="action === 'update'"
         />
       </UFormGroup>
 
@@ -38,18 +44,20 @@
 import type { FormSubmitEvent, FormError, FormErrorEvent } from '#ui/types'
 import { jobTagOptions } from '~/constants/select-options/jobs'
 import { positionOptions } from '~/constants/select-options/positions'
-import type { JobForm } from '~/types/forms'
+import type { JobForm, JobFormState } from '~/types/forms'
+
+const props = defineProps<JobForm>()
 
 const formRef = ref()
 
-const state = reactive<JobForm>({
-  position: '',
-  description: '',
-  isOpen: false,
-  tag: ''
+const state = reactive<JobFormState>({
+  position: props.form?.position || '',
+  description: props.form?.description || '',
+  isOpen: props.form?.isOpen || true,
+  tag: props.form?.tag || ''
 })
 
-const validate = (state: JobForm): FormError[] => {
+const validate = (state: JobFormState): FormError[] => {
   const errors = []
   if (!state.position) errors.push({ path: 'position', message: 'Required' })
   if (!state.description) errors.push({ path: 'description', message: 'Required' })
@@ -66,7 +74,11 @@ const submit = async () => {
   formRef.value?.submit()
 }
 
+const emit = defineEmits<{
+  (e: 'form-submit', data: object): void
+}>()
+
 const onSubmit = async (event: FormSubmitEvent<any>) => {
-  console.log(event.data)
+  emit('form-submit', event.data)
 }
 </script>
