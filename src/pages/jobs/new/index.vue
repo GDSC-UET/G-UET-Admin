@@ -6,11 +6,13 @@
     @submit="handleSubmit"
     @cancel="handleCancel"
   >
-    Haha
+    <SelectedOption label="Tran Manh Dung" />
   </PagesForm>
 </template>
 
 <script setup lang="ts">
+import SelectedOption from '~/components/common/selected-option.vue'
+
 const handleSubmit = () => {
   console.log('submit')
 }
