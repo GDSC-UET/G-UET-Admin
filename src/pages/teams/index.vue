@@ -14,7 +14,7 @@ import { mockTeams } from '~/mock/teams'
 import type { TablePages } from '~/types/table-pages'
 
 const tablePagesData = ref<TablePages>({
-  title: 'All Positions',
+  title: 'All Teams',
   createButton: {
     label: 'Add new team',
     to: '/teams/new'
