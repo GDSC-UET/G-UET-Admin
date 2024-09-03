@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 flex flex-col items-center gap-8">
+  <div class="my-16 flex flex-col items-center gap-8">
     <span class="text-4xl font-medium">{{ title }}</span>
     <div class="flex w-[800px] flex-col items-center gap-8">
       <slot />
@@ -32,10 +32,7 @@ import type { FormPages } from '~/types/form-pages'
 
 defineProps<FormPages>()
 
-const emit = defineEmits<{
-  (e: 'submit'): void
-  (e: 'cancel'): void
-}>()
+const emit = defineEmits(['submit', 'cancel'])
 
 const handleSubmit = () => {
   emit('submit')

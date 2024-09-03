@@ -10,7 +10,5 @@ import type { SelectedOption } from '~/types/selected-option'
 
 defineProps<SelectedOption>()
 
-const emit = defineEmits<{
-  (e: 'delete'): void
-}>()
+const emit = defineEmits(['delete'])
 </script>

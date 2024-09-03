@@ -44,7 +44,7 @@
 import type { FormSubmitEvent, FormError, FormErrorEvent } from '#ui/types'
 import { jobTagOptions } from '~/constants/select-options/jobs'
 import { positionOptions } from '~/constants/select-options/positions'
-import type { JobForm, JobFormState } from '~/types/forms'
+import type { JobForm, JobFormState } from '~/types/jobs'
 
 const props = defineProps<JobForm>()
 
