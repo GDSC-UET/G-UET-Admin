@@ -14,3 +14,23 @@ export type ProjectForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type NewProjectRoleState = {
+  name: string
+}
+
+export type ProjectRoles = {
+  id: number
+  name: string
+}
+
+export type ProjectRolesFormState = {
+  roles: ProjectRoles[]
+}
+
+export type ProjectRolesForm = {
+  form?: ProjectRolesFormState
+  action: FormAction
+  title: string
+  submitButtonLabel: string
+}
