@@ -1,7 +1,13 @@
 <template>
   <div class="flex gap-1">
     <span>{{ label }}</span>
-    <UButton size="2xs" color="red" icon="i-heroicons-trash" :ui="{ rounded: 'rounded-full' }" />
+    <UButton
+      size="2xs"
+      color="red"
+      icon="i-heroicons-trash"
+      :ui="{ rounded: 'rounded-full' }"
+      @click="emit('delete')"
+    />
   </div>
 </template>
 
