@@ -2,6 +2,7 @@ import type { FormAction } from './form-pages'
 
 export type MemberFormState = {
   name?: string
+  avatar?: string
   email?: string
   school?: string
   position?: string

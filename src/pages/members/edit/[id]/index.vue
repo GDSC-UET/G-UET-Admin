@@ -10,6 +10,7 @@
 <script setup lang="ts">
 const currentMember = ref({
   name: 'Tran Manh Dung',
+  avatar: 'https://github.com',
   email: 'g-uet@gmail.com',
   school: 'UET',
   position: 'Frontend Developer',

@@ -17,6 +17,10 @@
         <UInput placeholder="Enter member name..." size="xl" v-model="state.name" />
       </UFormGroup>
 
+      <UFormGroup label="Avatar" name="avatar" required>
+        <UInput placeholder="Enter member avatar..." size="xl" v-model="state.avatar" />
+      </UFormGroup>
+
       <UFormGroup label="Email" name="email" required>
         <UInput placeholder="Enter member email..." size="xl" v-model="state.email" />
       </UFormGroup>
@@ -86,6 +90,7 @@ const formRef = ref()
 
 const state = reactive<MemberFormState>({
   name: props.form?.name || '',
+  avatar: props.form?.avatar || '',
   email: props.form?.email || '',
   school: props.form?.school || '',
   position: props.form?.position || '',
@@ -100,6 +105,7 @@ const state = reactive<MemberFormState>({
 const validate = (state: MemberFormState): FormError[] => {
   const errors = []
   if (!state.name) errors.push({ path: 'name', message: 'Required' })
+  if (!state.avatar) errors.push({ path: 'avatar', message: 'Required' })
   if (!state.email) errors.push({ path: 'email', message: 'Required' })
   if (!state.school) errors.push({ path: 'school', message: 'Required' })
   if (!state.position) errors.push({ path: 'position', message: 'Required' })
