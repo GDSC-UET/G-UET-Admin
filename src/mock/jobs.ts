@@ -35,3 +35,47 @@ export const mockJobs = [
     status: 'Open'
   }
 ]
+
+export const mockJob = {
+  id: 1,
+  position: {
+    id: 1,
+    name: 'Frontend Developer'
+  },
+  tag: 'New',
+  isOpen: false,
+  description:
+    'Lorem ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum\nLorem ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum',
+  applicants: [
+    {
+      id: 1,
+      name: 'Tran Manh Dung',
+      linkCV: 'https://github.com/GDSC-UET',
+      appliedAt: new Date('08/21/2024')
+    },
+    {
+      id: 2,
+      name: 'Tran Manh Dung',
+      linkCV: 'https://github.com/GDSC-UET',
+      appliedAt: new Date('08/21/2024')
+    },
+    {
+      id: 3,
+      name: 'Tran Manh Dung',
+      linkCV: 'https://github.com/GDSC-UET',
+      appliedAt: new Date('08/21/2024')
+    },
+    {
+      id: 4,
+      name: 'Tran Manh Dung',
+      linkCV: 'https://github.com/GDSC-UET',
+      appliedAt: new Date('08/21/2024')
+    },
+    {
+      id: 5,
+      name: 'Tran Manh Dung',
+      linkCV: 'https://github.com/GDSC-UET',
+      appliedAt: new Date('08/21/2024')
+    }
+  ]
+}

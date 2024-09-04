@@ -17,3 +17,20 @@ export type JobForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type JobDetail = {
+  id: number
+  position: {
+    id: number
+    name: string
+  }
+  tag: string
+  isOpen: boolean
+  description: string
+  applicants: {
+    id: number
+    name: string
+    linkCV: string
+    appliedAt: Date
+  }[]
+}
