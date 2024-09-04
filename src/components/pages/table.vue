@@ -17,7 +17,7 @@
         @keyup.enter="handleSearch"
       />
     </div>
-    <UTable :columns="dataFields" :rows="data" />
+    <UTable :columns="dataFields" :rows="data" class="rounded-md border border-gray-200" />
     <UPagination v-model="page" :total="10" class="mx-auto flex" :page-count="5" />
   </div>
 </template>
