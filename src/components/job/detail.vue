@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 flex flex-col gap-8">
+  <div class="my-16 flex flex-col gap-8">
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-4">
         <span class="text-4xl font-medium">{{ position.name }}</span>

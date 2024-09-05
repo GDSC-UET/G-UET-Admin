@@ -20,3 +20,29 @@ export type MemberForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type MemberDetail = {
+  id: number
+  name: string
+  avatar: string
+  email: string
+  school: string
+  position: string
+  team: string
+  joinedAt: Date
+  gen: number
+  aboutThisMember: string
+  facebook: string
+  github: string
+  linkedin: string
+  awards: {
+    id: number
+    label: string
+  }[]
+  activities: {
+    id: number
+    start: string
+    end: string
+    project: string
+  }[]
+}
