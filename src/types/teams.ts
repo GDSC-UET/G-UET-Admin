@@ -15,3 +15,15 @@ export type TeamForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type TeamDetail = {
+  id: number
+  name: string
+  description: string
+  positions: {
+    id: number
+    position: string
+    description: string
+    members: number
+  }[]
+}
