@@ -16,3 +16,14 @@ export type AwardForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type AwardDetail = {
+  id: number
+  name: string
+  type: string
+  description: string
+  owners: {
+    id: number
+    name: string
+  }[]
+}
