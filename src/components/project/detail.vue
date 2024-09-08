@@ -36,7 +36,7 @@
       </nuxt-link>
     </div>
     <UTable :columns="columns" :rows="contributors" />
-    <UPagination v-model="page" :total="contributors.length" :page-count="5" />
+    <UPagination v-model="page" :total="contributors.length" :page-count="5" class="flex mx-auto" />
   </div>
 </template>
 
