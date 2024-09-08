@@ -34,3 +34,19 @@ export type ProjectRolesForm = {
   title: string
   submitButtonLabel: string
 }
+
+export type ProjectDetail = {
+  id: number
+  name: string
+  version: string
+  description: string
+  github: string
+  product: string
+  contributors: {
+    id: number
+    name: string
+    position: string
+    gen: number
+    roles: string[]
+  }[]
+}
