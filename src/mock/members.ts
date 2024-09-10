@@ -84,3 +84,22 @@ export const mockMember = {
     }
   ]
 }
+
+export const mockMemberActivities = {
+  name: 'Tran Manh Dung',
+  position: 'Frontend Developer',
+  activities: [
+    {
+      id: 1,
+      start: new Date('08/24/2024'),
+      end: new Date('09/24/2024'),
+      project: 'G-UET'
+    },
+    {
+      id: 2,
+      start: new Date('08/24/2024'),
+      end: new Date('09/24/2024'),
+      project: 'G-UET'
+    }
+  ]
+}
