@@ -46,3 +46,19 @@ export type MemberDetail = {
     project: string
   }[]
 }
+
+export type MemberActivities = {
+  name: string
+  position: string
+  activities: {
+    start: Date
+    end: Date
+    project: string
+  }[]
+}
+
+export type NewActivitiesState = {
+  start: Date
+  end: Date
+  project: string
+}
