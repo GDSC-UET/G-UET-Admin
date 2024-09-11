@@ -4,7 +4,7 @@
       <span class="text-4xl font-medium">{{ name }}</span>
 
       <div class="flex items-center gap-4">
-        <nuxt-link :to="`/members/edit/${id}`">
+        <nuxt-link :to="`/members/${id}/edit`">
           <UButton label="Edit member" color="yellow" size="sm" />
         </nuxt-link>
         <UButton label="Delete member" color="red" size="sm" />
