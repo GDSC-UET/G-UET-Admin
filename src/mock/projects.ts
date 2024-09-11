@@ -91,3 +91,19 @@ export const mockProject = {
     }
   ]
 }
+
+export const mockContributors = {
+  id: 1,
+  name: 'G-UET',
+  version: '1.0',
+  contributors: [
+    {
+      contributor: { id: 1, name: 'Tran Manh Dung' },
+      roles: ['Project Manager', 'Frontend Developer']
+    },
+    {
+      contributor: { id: 2, name: 'Bui Duc Anh' },
+      roles: ['Backend Developer']
+    }
+  ]
+}
