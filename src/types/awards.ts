@@ -27,3 +27,8 @@ export type AwardDetail = {
     name: string
   }[]
 }
+
+export type AwardPresentForm = {
+  id: number
+  members: number[]
+}
