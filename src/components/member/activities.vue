@@ -15,7 +15,7 @@
           />
 
           <template #panel="{ close }">
-            <CommonDatePicker v-model="newActivitiesState.start" @close="close" />
+            <VDatePicker v-model="newActivitiesState.start" @close="close" />
           </template>
         </UPopover>
       </UFormGroup>
@@ -31,7 +31,7 @@
           />
 
           <template #panel="{ close }">
-            <CommonDatePicker v-model="newActivitiesState.end" @close="close" />
+            <VDatePicker v-model="newActivitiesState.end" @close="close" />
           </template>
         </UPopover>
       </UFormGroup>

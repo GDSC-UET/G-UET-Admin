@@ -23,6 +23,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@samk-dev/nuxt-vcalendar": "^1.0.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
