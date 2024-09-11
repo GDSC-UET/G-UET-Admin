@@ -10,7 +10,7 @@
         <nuxt-link to="/projects/roles">
           <UButton label="Edit project roles" />
         </nuxt-link>
-        <nuxt-link :to="`/projects/edit/${id}`">
+        <nuxt-link :to="`/projects/${id}/edit`">
           <UButton color="yellow" label="Edit project" />
         </nuxt-link>
         <UButton color="red" label="Delete project" />

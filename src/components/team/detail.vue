@@ -9,7 +9,7 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <nuxt-link :to="`/temas/edit/${id}`">
+        <nuxt-link :to="`/temas/${id}/edit`">
           <UButton label="Edit team" color="yellow" size="sm" />
         </nuxt-link>
         <UButton label="Delete team" color="red" size="sm" />
