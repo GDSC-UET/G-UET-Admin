@@ -49,7 +49,7 @@
           />
 
           <template #panel="{ close }">
-            <CommonDatePicker v-model="state.joinedAt" @close="close" />
+            <VDatePicker v-model="state.joinedAt" @close="close" />
           </template>
         </UPopover>
       </UFormGroup>
@@ -127,6 +127,11 @@ const validate = (state: MemberFormState): FormError[] => {
   if (!state.linkedin) errors.push({ path: 'linkedin', message: 'Required' })
 
   return errors
+}
+
+const setJoinedAt = (value: Date) => {
+  console.log(value)
+  state.joinedAt = value
 }
 
 const onError = async (event: FormErrorEvent) => {

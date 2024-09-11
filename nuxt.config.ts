@@ -10,7 +10,8 @@ export default defineNuxtConfig({
       }
     ],
     '@nuxt/eslint',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@samk-dev/nuxt-vcalendar'
   ],
   colorMode: {
     preference: 'light'
