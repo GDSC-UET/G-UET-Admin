@@ -103,18 +103,29 @@ const state = reactive<MemberFormState>({
 })
 
 const validate = (state: MemberFormState): FormError[] => {
-  const errors = []
+  const errors: FormError[] = []
+
   if (!state.name) errors.push({ path: 'name', message: 'Required' })
   if (!state.avatar) errors.push({ path: 'avatar', message: 'Required' })
-  if (!state.email) errors.push({ path: 'email', message: 'Required' })
+
+  if (!state.email) {
+    errors.push({ path: 'email', message: 'Required' })
+  } else {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ // Simple email regex pattern
+    if (!emailRegex.test(state.email)) {
+      errors.push({ path: 'email', message: 'Invalid email format' })
+    }
+  }
+
   if (!state.school) errors.push({ path: 'school', message: 'Required' })
   if (!state.position) errors.push({ path: 'position', message: 'Required' })
   if (!state.joinedAt) errors.push({ path: 'joinedAt', message: 'Required' })
   if (!state.gen) errors.push({ path: 'gen', message: 'Required' })
   if (!state.aboutThisMember) errors.push({ path: 'aboutThisMember', message: 'Required' })
   if (!state.facebook) errors.push({ path: 'facebook', message: 'Required' })
-  if (!state.github) errors.push({ path: 'joinedAt', message: 'Required' })
+  if (!state.github) errors.push({ path: 'github', message: 'Required' })
   if (!state.linkedin) errors.push({ path: 'linkedin', message: 'Required' })
+
   return errors
 }
 
