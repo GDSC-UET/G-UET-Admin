@@ -50,3 +50,31 @@ export type ProjectDetail = {
     roles: string[]
   }[]
 }
+
+export type Contributor = {
+  id: number
+  name: string
+}
+
+export type UpdateContributors = {
+  id: number
+  name: string
+  version: string
+  contributors: {
+    contributor: Contributor
+    roles: string[]
+  }[]
+}
+
+export type ProjectContributorsForm = {
+  id: number
+  contributors: {
+    contributor: Contributor
+    roles: string[]
+  }[]
+}
+
+export type NewContributorState = {
+  contributor: Contributor
+  roles: string[]
+}
