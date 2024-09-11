@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
@@ -10,13 +9,13 @@ export default defineNuxtConfig({
         }
       }
     ],
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@samk-dev/nuxt-vcalendar'
   ],
-
   colorMode: {
     preference: 'light'
   },
-
   devtools: { enabled: true },
   srcDir: 'src',
   css: ['~/assets/css/globals.css', '~/assets/css/variables.css'],
