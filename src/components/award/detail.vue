@@ -12,12 +12,7 @@
       </div>
     </div>
     <AwardTag :label="type" />
-    <div>
-      <span class="text-xl font-medium">Description:</span>
-      <ul class="ml-6 list-disc">
-        <li v-for="(item, index) in formattedDescription" :key="index">{{ item }}</li>
-      </ul>
-    </div>
+    <CommonList label="Description:" :data="formattedDescription" />
     <span class="text-xl font-medium"> Owners: {{ formattedOwners }} </span>
     <nuxt-link :to="`/awards/${id}/present`">
       <UButton label="Present this award" color="yellow" />

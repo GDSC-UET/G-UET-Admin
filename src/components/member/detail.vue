@@ -28,12 +28,7 @@
         <li v-if="linkedin">LinkedIn: {{ linkedin }}</li>
       </ul>
     </div>
-    <div>
-      <span class="text-xl font-medium">About this member:</span>
-      <ul class="ml-6 list-disc">
-        <li v-for="(item, index) in formattedAbout" :key="index">{{ item }}</li>
-      </ul>
-    </div>
+    <CommonList label="About this member:" :data="formattedAbout" />
     <div>
       <span class="text-xl font-medium">Awards:</span>
       <ul class="ml-6 list-disc">

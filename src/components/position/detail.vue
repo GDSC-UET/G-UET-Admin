@@ -15,12 +15,7 @@
         <UButton label="Delete job" color="red" size="sm" />
       </div>
     </div>
-    <div>
-      <span class="text-xl font-medium">Responsibilities</span>
-      <ul class="ml-6 list-disc">
-        <li v-for="(item, index) in formattedResponsibilities" :key="index">{{ item }}</li>
-      </ul>
-    </div>
+    <CommonList label="Responsibilities:" :data="formattedResponsibilities" />
     <span class="text-xl font-medium">Members: {{ members.length }}</span>
     <UTable :columns="columns" :rows="members" class="rounded-md border border-gray-200" />
     <UPagination :total="members.length" :page-count="5" v-model="page" class="mx-auto flex" />

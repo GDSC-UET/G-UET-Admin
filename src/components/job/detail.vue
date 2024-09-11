@@ -21,12 +21,7 @@
       <UButton v-if="isOpen" size="sm" label="Close this job" color="red" />
       <UButton v-else size="sm" label="Open this job" />
     </div>
-    <div>
-      <span class="text-xl font-medium">Description: </span>
-      <ul class="ml-6 list-disc">
-        <li v-for="(item, index) in formattedDescription" :key="index">{{ item }}</li>
-      </ul>
-    </div>
+    <CommonList label="Description:" :data="formattedDescription" />
     <span class="text-xl font-medium">Applicants: {{ applicants.length }}</span>
     <UTable :columns="columns" :rows="applicants" class="rounded-md border border-gray-200" />
     <UPagination :total="applicants.length" :page-count="5" v-model="page" class="mx-auto flex" />
