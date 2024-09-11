@@ -65,7 +65,7 @@
         <UButton
           type="submit"
           label="Submit member activities"
-          size="xl"
+          size="md"
           class="w-[300px] justify-center rounded-full"
         />
       </UFormGroup>
@@ -74,7 +74,7 @@
         label="Cancel"
         class="w-[300px] justify-center rounded-full"
         color="gray"
-        size="xl"
+        size="md"
       />
     </div>
   </div>
