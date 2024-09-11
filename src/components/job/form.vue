@@ -16,7 +16,7 @@
       <UFormGroup label="Position" name="position" required>
         <USelect
           placeholder="Select"
-          size="xl"
+          size="md"
           v-model="state.position"
           :options="positionOptions"
           :disabled="action === 'update'"
@@ -33,7 +33,7 @@
         </UFormGroup>
 
         <UFormGroup label="Tag" name="tag" class="w-[360px]">
-          <USelect placeholder="Select" size="xl" v-model="state.tag" :options="jobTagOptions" />
+          <USelect placeholder="Select" size="md" v-model="state.tag" :options="jobTagOptions" />
         </UFormGroup>
       </div>
     </UForm>

@@ -14,11 +14,11 @@
       ref="formRef"
     >
       <UFormGroup label="Name" name="name" required>
-        <UInput placeholder="Enter position name..." size="xl" v-model="state.name" />
+        <UInput placeholder="Enter position name..." size="md" v-model="state.name" />
       </UFormGroup>
 
       <UFormGroup label="Team" name="team" required>
-        <USelect placeholder="Select" size="xl" v-model="state.team" :options="teamOptions" />
+        <USelect placeholder="Select" size="md" v-model="state.team" :options="teamOptions" />
       </UFormGroup>
 
       <UFormGroup label="Resposibilities" name="responsibilities" required>

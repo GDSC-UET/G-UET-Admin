@@ -14,19 +14,19 @@
       ref="formRef"
     >
       <UFormGroup label="Name" name="name" required>
-        <UInput placeholder="Enter project name..." size="xl" v-model="state.name" />
+        <UInput placeholder="Enter project name..." size="md" v-model="state.name" />
       </UFormGroup>
 
       <UFormGroup label="Version" name="version" required>
-        <UInput placeholder="Enter project version..." size="xl" v-model="state.version" />
+        <UInput placeholder="Enter project version..." size="md" v-model="state.version" />
       </UFormGroup>
 
       <UFormGroup label="Link Github Project" name="github" required>
-        <UInput placeholder="Enter project github link..." size="xl" v-model="state.github" />
+        <UInput placeholder="Enter project github link..." size="md" v-model="state.github" />
       </UFormGroup>
 
       <UFormGroup label="Link Product" name="product" required>
-        <UInput placeholder="Enter project product link..." size="xl" v-model="state.product" />
+        <UInput placeholder="Enter project product link..." size="md" v-model="state.product" />
       </UFormGroup>
 
       <UFormGroup label="Description" name="description" required>

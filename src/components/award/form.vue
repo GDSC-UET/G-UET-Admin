@@ -14,11 +14,11 @@
       ref="formRef"
     >
       <UFormGroup label="Name" name="name" required>
-        <UInput placeholder="Enter award name..." size="xl" v-model="state.name" />
+        <UInput placeholder="Enter award name..." size="md" v-model="state.name" />
       </UFormGroup>
 
       <UFormGroup label="Type" name="type" required>
-        <USelect placeholder="Select" size="xl" v-model="state.type" :options="awardTypeOptions" />
+        <USelect placeholder="Select" size="md" v-model="state.type" :options="awardTypeOptions" />
       </UFormGroup>
 
       <UFormGroup label="Description" name="description" required>
