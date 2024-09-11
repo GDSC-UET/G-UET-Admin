@@ -15,14 +15,7 @@
         <UButton label="Delete team" color="red" size="sm" />
       </div>
     </div>
-
-    <div>
-      <span class="text-xl font-medium">Description:</span>
-      <ul class="ml-6 list-disc">
-        <li v-for="(item, index) in formattedDescription" :key="index">{{ item }}</li>
-      </ul>
-    </div>
-
+    <CommonList label="Description:" :data="formattedDescription" />
     <UTable :columns="columns" :rows="positions" />
     <UPagination class="mx-auto flex" :total="positions.length" :page-count="5" v-model="page" />
   </div>

@@ -16,12 +16,7 @@
         <UButton color="red" label="Delete project" />
       </div>
     </div>
-    <div>
-      <span class="text-xl font-medium">Description</span>
-      <ul class="list-disc ml-6">
-        <li v-for="(item, index) in formattedDescription" :key="index">{{ item }}</li>
-      </ul>
-    </div>
+    <CommonList label="Description:" :data="formattedDescription" />
     <div>
       <span class="text-xl font-medium">Links:</span>
       <ul class="list-disc ml-6">
