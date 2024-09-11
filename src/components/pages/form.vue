@@ -6,7 +6,7 @@
       <div class="flex flex-col gap-2">
         <UButton
           :ui="{ rounded: 'rounded-full' }"
-          size="lg"
+          size="md"
           :label="submitButtonLabel"
           block
           class="w-[300px]"
@@ -15,7 +15,7 @@
         />
         <UButton
           :ui="{ rounded: 'rounded-full' }"
-          size="lg"
+          size="md"
           label="Cancel"
           class="w-[300px]"
           block

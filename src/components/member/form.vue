@@ -14,25 +14,25 @@
       ref="formRef"
     >
       <UFormGroup label="Name" name="name" required>
-        <UInput placeholder="Enter member name..." size="xl" v-model="state.name" />
+        <UInput placeholder="Enter member name..." size="md" v-model="state.name" />
       </UFormGroup>
 
       <UFormGroup label="Avatar" name="avatar" required>
-        <UInput placeholder="Enter member avatar..." size="xl" v-model="state.avatar" />
+        <UInput placeholder="Enter member avatar..." size="md" v-model="state.avatar" />
       </UFormGroup>
 
       <UFormGroup label="Email" name="email" required>
-        <UInput placeholder="Enter member email..." size="xl" v-model="state.email" />
+        <UInput placeholder="Enter member email..." size="md" v-model="state.email" />
       </UFormGroup>
 
       <UFormGroup label="School" name="school" required>
-        <UInput placeholder="Enter member school..." size="xl" v-model="state.school" />
+        <UInput placeholder="Enter member school..." size="md" v-model="state.school" />
       </UFormGroup>
 
       <UFormGroup label="Position" name="position" required>
         <USelect
           placeholder="Select"
-          size="xl"
+          size="md"
           v-model="state.position"
           :options="positionOptions"
         />
@@ -45,7 +45,7 @@
             :label="format(state.joinedAt || new Date(), 'd MMM, yyy')"
             color="white"
             class="w-full"
-            size="xl"
+            size="md"
           />
 
           <template #panel="{ close }">
@@ -55,7 +55,7 @@
       </UFormGroup>
 
       <UFormGroup label="Gen" name="gen" required>
-        <USelect placeholder="Select" size="xl" v-model="state.gen" :options="genOptions" />
+        <USelect placeholder="Select" size="md" v-model="state.gen" :options="genOptions" />
       </UFormGroup>
 
       <UFormGroup label="About this member" name="aboutThisMember" required>
@@ -63,15 +63,15 @@
       </UFormGroup>
 
       <UFormGroup label="Facebook" name="facebook" required>
-        <UInput placeholder="Enter member facebook..." size="xl" v-model="state.facebook" />
+        <UInput placeholder="Enter member facebook..." size="md" v-model="state.facebook" />
       </UFormGroup>
 
       <UFormGroup label="Github" name="github" required>
-        <UInput placeholder="Enter member github..." size="xl" v-model="state.github" />
+        <UInput placeholder="Enter member github..." size="md" v-model="state.github" />
       </UFormGroup>
 
       <UFormGroup label="LinkedIn" name="linkedin" required>
-        <UInput placeholder="Enter member linkedin..." size="xl" v-model="state.linkedin" />
+        <UInput placeholder="Enter member linkedin..." size="md" v-model="state.linkedin" />
       </UFormGroup>
     </UForm>
   </PagesForm>

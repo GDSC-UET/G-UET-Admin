@@ -14,7 +14,7 @@
       ref="formRef"
     >
       <UFormGroup label="Name" name="name" required>
-        <UInput placeholder="Enter position name..." size="xl" v-model="state.name" />
+        <UInput placeholder="Enter team name..." size="md" v-model="state.name" />
       </UFormGroup>
 
       <UFormGroup label="Description" name="description" required>

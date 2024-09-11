@@ -11,7 +11,7 @@
             :label="format(newActivitiesState.start, 'MM/dd/yyyy')"
             color="white"
             class="w-full"
-            size="xl"
+            size="md"
           />
 
           <template #panel="{ close }">
@@ -27,7 +27,7 @@
             :label="format(newActivitiesState.end, 'MM/dd/yyyy')"
             color="white"
             class="w-full"
-            size="xl"
+            size="md"
           />
 
           <template #panel="{ close }">
@@ -41,13 +41,13 @@
           v-model="newActivitiesState.project"
           :options="projectOptions"
           label="Select project"
-          size="xl"
+          size="md"
           placeholder="Select"
         />
       </UFormGroup>
 
       <UFormGroup class="grow">
-        <UButton type="submit" label="Add" size="xl" />
+        <UButton type="submit" label="Add" size="md" />
       </UFormGroup>
     </UForm>
 
