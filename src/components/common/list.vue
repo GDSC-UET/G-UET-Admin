@@ -1,7 +1,7 @@
 <template>
   <div>
-    <span class="text-lg font-medium">{{ label }}</span>
-    <ul class="ml-6 list-disc">
+    <span class="font-medium md:text-lg">{{ label }}</span>
+    <ul class="ml-6 list-disc text-sm md:text-base">
       <li v-for="(item, index) in data" :key="index">{{ item }}</li>
     </ul>
   </div>

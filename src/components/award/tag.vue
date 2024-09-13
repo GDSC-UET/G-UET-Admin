@@ -1,6 +1,7 @@
 <template>
   <div class="relative w-fit">
-    <UBadge :color="color" :label="label" size="lg" />
+    <UBadge :color="color" :label="label" size="lg" class="hidden md:flex" />
+    <UBadge :color="color" :label="label" size="md" class="md:hidden" />
   </div>
 </template>
 

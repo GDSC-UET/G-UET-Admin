@@ -1,11 +1,15 @@
 <template>
-  <UVerticalNavigation :links="navigationLinks" class="mt-4 w-full">
+  <UVerticalNavigation
+    :links="navigationLinks"
+    class="z-10 w-full border-b border-gray-300 bg-white lg:mt-4 lg:border-none"
+    @click="emit('choose')"
+  >
     <template #icon="{ link }">
-      <UIcon :name="link.icon" class="group-hover:text-primary ml-1 text-2xl" />
+      <UIcon :name="link.icon" class="group-hover:text-primary ml-1 md:text-2xl" />
     </template>
     <template #default="{ link }">
       <span
-        class="group-hover:text-primary relative ml-1 flex h-12 items-center text-base font-medium"
+        class="group-hover:text-primary relative ml-1 flex h-6 items-center text-xs font-medium md:h-12 md:text-base"
         >{{ link.label }}</span
       >
     </template>
@@ -31,12 +35,12 @@ const navigationLinks = ref([
   },
   {
     label: 'Positions',
-    icon: 'i-heroicons-briefcase',
+    icon: 'i-heroicons-rectangle-stack',
     to: '/positions'
   },
   {
     label: 'Teams',
-    icon: 'i-heroicons-users',
+    icon: 'i-heroicons-building-office',
     to: '/teams'
   },
   {
@@ -46,8 +50,12 @@ const navigationLinks = ref([
   },
   {
     label: 'Projects',
-    icon: 'i-heroicons-briefcase',
+    icon: 'i-heroicons-wrench-screwdriver',
     to: '/projects'
   }
 ])
+
+const emit = defineEmits<{
+  (e: 'choose'): void
+}>()
 </script>

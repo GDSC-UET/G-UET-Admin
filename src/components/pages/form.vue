@@ -1,27 +1,29 @@
 <template>
-  <div class="my-16 flex flex-col items-center gap-8">
-    <span class="text-4xl font-medium">{{ title }}</span>
-    <div class="flex w-[800px] flex-col items-center gap-8">
-      <slot />
-      <div class="flex flex-col gap-2">
-        <UButton
-          :ui="{ rounded: 'rounded-full' }"
-          size="md"
-          :label="submitButtonLabel"
-          block
-          class="w-[300px]"
-          :color="action === 'create' ? 'primary' : 'yellow'"
-          @click="handleSubmit"
-        />
-        <UButton
-          :ui="{ rounded: 'rounded-full' }"
-          size="md"
-          label="Cancel"
-          class="w-[300px]"
-          block
-          color="gray"
-          @click="handleCancel"
-        />
+  <div class="my-8 flex flex-col items-center gap-4 md:my-16 md:gap-8">
+    <span class="text-center text-2xl font-medium md:text-4xl">{{ title }}</span>
+    <div class="w-[460px] max-w-full md:w-[560px] lg:w-[800px]">
+      <div class="mx-4 flex flex-col items-center gap-4 md:gap-8">
+        <slot />
+        <div class="flex flex-col gap-2">
+          <UButton
+            :ui="{ rounded: 'rounded-full' }"
+            size="md"
+            :label="submitButtonLabel"
+            block
+            class="w-[300px]"
+            :color="action === 'create' ? 'primary' : 'yellow'"
+            @click="handleSubmit"
+          />
+          <UButton
+            :ui="{ rounded: 'rounded-full' }"
+            size="md"
+            label="Cancel"
+            class="w-[300px]"
+            block
+            color="gray"
+            @click="handleCancel"
+          />
+        </div>
       </div>
     </div>
   </div>

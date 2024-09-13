@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-16 flex flex-col gap-8">
-    <span class="mx-auto text-4xl font-medium">Present award</span>
-    <span class="text-lg font-medium">{{ name }}</span>
+  <div class="mt-8 flex flex-col gap-4 md:mt-16 md:gap-8">
+    <span class="mx-auto text-2xl font-medium md:text-4xl">Present award</span>
+    <span class="text-base font-medium md:text-lg">{{ name }}</span>
     <AwardTag :label="type" />
     <UForm :state="state" class="flex flex-col gap-8">
       <UFormGroup label="Members">

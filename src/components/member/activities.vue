@@ -1,42 +1,48 @@
 <template>
-  <div class="my-16 flex flex-col gap-8">
-    <span class="text-center text-4xl font-medium">Update member activities</span>
-    <span class="text-xl font-medium">{{ name }}</span>
-    <span class="text-xl font-medium">Position: {{ position }}</span>
-    <UForm :state="newActivitiesState" class="flex items-end gap-4" @submit="">
-      <UFormGroup required label="Started At" class="w-1/5">
-        <UPopover :popper="{ placement: 'bottom-start' }" class="w-full">
-          <UButton
-            icon="i-heroicons-calendar-days"
-            :label="format(newActivitiesState.start, 'MM/dd/yyyy')"
-            color="white"
-            class="w-full"
-            size="md"
-          />
+  <div class="my-8 flex flex-col gap-4 md:my-16 md:gap-8">
+    <span class="text-center text-2xl font-medium md:text-4xl">Update member activities</span>
+    <span class="text-base font-medium md:text-xl">{{ name }}</span>
+    <span class="text-base font-medium md:text-xl">Position: {{ position }}</span>
+    <UForm
+      :state="newActivitiesState"
+      class="flex flex-col items-center gap-4 lg:flex-row lg:items-end"
+      @submit=""
+    >
+      <div class="flex w-full gap-4 lg:w-2/5">
+        <UFormGroup required label="Started At" class="w-1/2">
+          <UPopover :popper="{ placement: 'bottom-start' }" class="w-full">
+            <UButton
+              icon="i-heroicons-calendar-days"
+              :label="format(newActivitiesState.start, 'MM/dd/yyyy')"
+              color="white"
+              class="w-full"
+              size="md"
+            />
 
-          <template #panel="{ close }">
-            <VDatePicker v-model="newActivitiesState.start" @close="close" />
-          </template>
-        </UPopover>
-      </UFormGroup>
+            <template #panel="{ close }">
+              <VDatePicker v-model="newActivitiesState.start" @close="close" />
+            </template>
+          </UPopover>
+        </UFormGroup>
 
-      <UFormGroup required label="Finish At" class="w-1/5">
-        <UPopover :popper="{ placement: 'bottom-start' }" class="w-full">
-          <UButton
-            icon="i-heroicons-calendar-days"
-            :label="format(newActivitiesState.end, 'MM/dd/yyyy')"
-            color="white"
-            class="w-full"
-            size="md"
-          />
+        <UFormGroup required label="Finish At" class="w-1/2">
+          <UPopover :popper="{ placement: 'bottom-start' }" class="w-full">
+            <UButton
+              icon="i-heroicons-calendar-days"
+              :label="format(newActivitiesState.end, 'MM/dd/yyyy')"
+              color="white"
+              class="w-full"
+              size="md"
+            />
 
-          <template #panel="{ close }">
-            <VDatePicker v-model="newActivitiesState.end" @close="close" />
-          </template>
-        </UPopover>
-      </UFormGroup>
+            <template #panel="{ close }">
+              <VDatePicker v-model="newActivitiesState.end" @close="close" />
+            </template>
+          </UPopover>
+        </UFormGroup>
+      </div>
 
-      <UFormGroup required class="w-1/2" label="Project">
+      <UFormGroup required class="w-full lg:w-1/2" label="Project">
         <USelect
           v-model="newActivitiesState.project"
           :options="projectOptions"
@@ -47,7 +53,7 @@
       </UFormGroup>
 
       <UFormGroup class="grow">
-        <UButton type="submit" label="Add" size="md" />
+        <UButton type="submit" label="Add" size="md" class="w-[200px] justify-center lg:w-full" />
       </UFormGroup>
     </UForm>
 

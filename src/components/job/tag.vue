@@ -1,5 +1,12 @@
 <template>
-  <UBadge :label="label" variant="solid" size="lg" :color="color || 'white'" />
+  <UBadge
+    :label="label"
+    variant="solid"
+    size="lg"
+    :color="color || 'white'"
+    class="hidden md:flex"
+  />
+  <UBadge :label="label" variant="solid" :color="color || 'white'" class="md:hidden" />
 </template>
 
 <script setup lang="ts">

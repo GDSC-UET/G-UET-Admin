@@ -1,9 +1,20 @@
 <template>
-  <div class="mt-16 flex flex-col gap-8">
+  <div class="mt-4 flex flex-col gap-4 md:mt-16 md:gap-8">
     <div class="flex w-full items-center justify-between">
-      <span class="text-2xl font-medium">{{ title }}</span>
+      <span class="text-lg font-medium md:text-2xl">{{ title }}</span>
       <nuxt-link v-if="createButton" :to="createButton.to">
-        <UButton size="md" icon="i-heroicons-pencil-square" :label="createButton.label" />
+        <UButton
+          size="md"
+          icon="i-heroicons-pencil-square"
+          :label="createButton.label"
+          class="hidden md:flex"
+        />
+        <UButton
+          size="sm"
+          icon="i-heroicons-pencil-square"
+          :label="createButton.label"
+          class="md:hidden"
+        />
       </nuxt-link>
     </div>
     <div class="flex w-full items-center justify-end gap-4">
@@ -11,13 +22,17 @@
       <UInput
         v-model="searchQuery"
         :ui="{ rounded: 'rounded-full' }"
-        class="relative w-[290px]"
+        class="relative md:w-[290px]"
         icon="i-heroicons-magnifying-glass"
         placeholder="Search..."
         @keyup.enter="handleSearch"
       />
     </div>
-    <UTable :columns="dataFields" :rows="data" class="rounded-md border border-gray-200" />
+    <UTable
+      :columns="dataFields"
+      :rows="data"
+      class="overflow-x-scroll rounded-md border border-gray-200"
+    />
     <UPagination v-model="page" :total="10" class="mx-auto flex" :page-count="5" />
   </div>
 </template>
