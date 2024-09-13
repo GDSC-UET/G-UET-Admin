@@ -8,7 +8,7 @@
     <UForm
       :validate="validate"
       :state="state"
-      class="flex w-full flex-col gap-8"
+      class="flex w-full flex-col gap-4 md:gap-8"
       @error="onError"
       @submit="onSubmit"
       ref="formRef"

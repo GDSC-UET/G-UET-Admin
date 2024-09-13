@@ -2,12 +2,15 @@
   <div class="mt-16 flex flex-col gap-8">
     <span class="mx-auto text-4xl font-medium">Update contributors</span>
     <span class="text-lg font-medium">{{ `${name} (v${version})` }}</span>
-    <UForm :state="newContributorState" class="flex items-end gap-4">
-      <UFormGroup label="Member" class="w-2/5">
+    <UForm
+      :state="newContributorState"
+      class="flex flex-col items-center gap-4 md:flex-row md:items-end"
+    >
+      <UFormGroup label="Member" class="w-full md:w-2/5">
         <USelect :options="members" size="md" v-model="newContributorState.contributor.id" />
       </UFormGroup>
 
-      <UFormGroup label="Roles" class="w-2/5">
+      <UFormGroup label="Roles" class="w-full md:w-2/5">
         <USelectMenu
           :options="roleOptions"
           size="md"
@@ -17,11 +20,11 @@
       </UFormGroup>
 
       <UFormGroup class="grow">
-        <UButton label="Add" size="md" class="w-full justify-center"></UButton>
+        <UButton label="Add" size="md" class="w-[200px] justify-center md:w-full"></UButton>
       </UFormGroup>
     </UForm>
 
-    <UFormGroup label="Current contributors" class="flex flex-col gap-2">
+    <UFormGroup label="Current contributors" class="flex flex-col">
       <CommonSelectedOption
         v-for="member in selectedContributors"
         :key="member.contributor.id"
