@@ -1,7 +1,7 @@
 <template>
   <UVerticalNavigation
     :links="navigationLinks"
-    class="z-10 w-full border-b border-gray-300 bg-white md:mt-4 md:border-none"
+    class="z-10 w-full border-b border-gray-300 bg-white lg:mt-4 lg:border-none"
     @click="emit('choose')"
   >
     <template #icon="{ link }">

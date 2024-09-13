@@ -1,22 +1,24 @@
 <template>
-  <div class="my-16 flex flex-col gap-8">
-    <div class="flex items-center justify-between">
-      <span class="text-4xl font-medium">{{ name }}</span>
+  <div class="my-8 flex flex-col gap-4 md:my-16 md:gap-8">
+    <div class="mb-2 flex flex-col justify-between gap-2 md:flex-row md:items-center md:gap-4">
+      <span class="text-2xl font-medium md:text-4xl">{{ name }}</span>
       <div class="flex items-center gap-4">
-        <span>Status: {{ status }}</span>
-        <UButton color="green" label="Shortlist" />
-        <UButton color="red" label="Decline" />
+        <span class="text-sm md:text-base">Status: {{ status }}</span>
+        <UButton color="green" label="Shortlist" class="hidden md:flex" />
+        <UButton color="green" label="Shortlist" class="md:hidden" size="xs" />
+        <UButton color="red" label="Decline" class="hidden md:flex" />
+        <UButton color="red" label="Decline" class="md:hidden" size="xs" />
       </div>
     </div>
-    <span class="text-xl font-medium">{{ email }} • {{ phoneNumber }}</span>
+    <span class="font-medium md:text-xl">{{ email }} • {{ phoneNumber }}</span>
     <div class="flex items-center gap-4">
-      <span class="text-xl font-medium">{{ position.name }}</span>
+      <span class="font-medium md:text-xl">{{ position.name }}</span>
       <TeamBadge :label="position.team" />
     </div>
-    <span class="text-xl font-medium">Applied at {{ format(appliedAt, 'mm/dd/yyyy') }}</span>
-    <span class="text-xl font-medium">{{ school }}</span>
-    <p><span class="text-xl font-medium">Link CV: </span>{{ linkCV }}</p>
-    <p><span class="text-xl font-medium">Notes: </span>{{ notes }}</p>
+    <span class="font-medium md:text-xl">Applied at {{ format(appliedAt, 'mm/dd/yyyy') }}</span>
+    <span class="font-medium md:text-xl">{{ school }}</span>
+    <p><span class="font-medium md:text-xl">Link CV: </span>{{ linkCV }}</p>
+    <p><span class="font-medium md:text-xl">Notes: </span>{{ notes }}</p>
   </div>
 </template>
 
